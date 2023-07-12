@@ -8,7 +8,8 @@
 
 :root {
 	--color-primary: #020d18;
-	--color-secondary: #f1c40f;
+	/* --color-secondary: #f1c40f; */
+	--color-secondary: #d265d7;
 }
 
 body {
@@ -364,6 +365,6 @@ section h2 {
 
 .my-logo img {
 	max-height: 70px;
-	border-radius: 50px; /*make it cricle*/
+	border-radius: 20px; /*make it cricle*/
 	margin-left: 50px;
 }
