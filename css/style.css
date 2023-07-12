@@ -353,9 +353,3 @@ section h2 {
 .error {
   background: red;
 }
-
-.my-logo img {
-	max-height: 70px;
-	border-radius: 20px; /*make it cricle*/
-	margin-left: 50px;
-}
