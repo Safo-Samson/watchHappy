@@ -359,11 +359,71 @@ section h2 {
 	background: red;
 }
 
+/* My styling*/
 .my-logo img {
 	max-height: 70px;
 	border-radius: 20px; /*make it cricle*/
 }
 
-.explore-rating {
-	background-color: #bd55e0;
+.purple-slide {
+	position: relative;
+	animation: slide-in 3s ease-out forwards;
+}
+
+@keyframes slide-in {
+	0% {
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+
+	50% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+.purple-slide::before,
+.purple-slide::after {
+	content: "";
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	top: 0;
+	z-index: -1;
+}
+
+.purple-slide::before {
+	left: 0;
+	background-color: rgba(225, 21, 229, 0.274);
+	animation: reveal-left 10s ease-out forwards;
+}
+
+.purple-slide::after {
+	right: 0;
+	background-color: rgba(215, 25, 218, 0.539);
+	animation: reveal-right 10s ease-out forwards;
+}
+
+@keyframes reveal-left {
+	0% {
+		transform: scaleX(0);
+	}
+
+	100% {
+		transform: scaleX(1);
+	}
+}
+
+@keyframes reveal-right {
+	0% {
+		transform: scaleX(0);
+	}
+
+	100% {
+		transform: scaleX(1);
+	}
 }
