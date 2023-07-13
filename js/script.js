@@ -260,7 +260,6 @@ async function search() {
 
 	if (global.search.term !== "" && global.search.term !== null) {
 		const { results, total_pages, page, total_results } = await searchAPIData();
-		console.log(results);
 
 		global.search.page = page;
 		global.search.totalPages = total_pages;
@@ -400,7 +399,7 @@ function initSwiper() {
 		loop: true,
 		autoplay: {
 			delay: 2000,
-			disableOnInteraction: true,
+			disableOnInteraction: false,
 		},
 		breakpoints: {
 			500: {
@@ -483,25 +482,6 @@ function showAlert(message, className = "error") {
 function addCommasToNumber(number) {
 	return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
-
-//scroll up logo
-const scrollUp = document.querySelector(".logo");
-
-scrollUp.addEventListener("click", (e) => {
-	e.preventDefault();
-	window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-// to show the scroll up bottom only below the main screen
-window.addEventListener("scroll", () => {
-	const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-	if (scrollTop > window.innerHeight) {
-		scrollUp.classList.remove("logo-hidden");
-	} else {
-		scrollUp.classList.add("logo-hidden");
-	}
-});
 
 // Init App
 function init() {
