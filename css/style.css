@@ -159,13 +159,6 @@ ul {
 	align-items: center;
 }
 
-.main-footer .container .logo {
-	color: #fff;
-	font-size: 25px;
-	font-weight: 700;
-	text-transform: uppercase;
-}
-
 .main-footer .container .social-links {
 	display: flex;
 	font-size: 20px;
@@ -426,4 +419,22 @@ section h2 {
 	100% {
 		transform: scaleX(1);
 	}
+}
+
+.logo-hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.main-footer .container .logo {
+	color: #fff;
+	font-size: 30px;
+	/* font-weight: 700; */
+	/* text-transform: uppercase; */
+
+	z-index: 999;
+	transition: opacity 0.3s;
+	position: fixed;
+	bottom: 30px;
+	right: 20px;
 }

@@ -483,6 +483,24 @@ function addCommasToNumber(number) {
 	return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
+// adding scroll up
+const scrollIcon = document.querySelector(".logo");
+scrollIcon.addEventListener("click", (e) => {
+	e.preventDefault();
+	window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// to show the scroll Icon bottom only below the main screen
+window.addEventListener("scroll", () => {
+	const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+	if (scrollTop > window.innerHeight) {
+		scrollIcon.classList.remove("logo-hidden");
+	} else {
+		scrollIcon.classList.add("logo-hidden");
+	}
+});
+
 // Init App
 function init() {
 	switch (global.currentPage) {
