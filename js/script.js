@@ -260,6 +260,7 @@ async function search() {
 
 	if (global.search.term !== "" && global.search.term !== null) {
 		const { results, total_pages, page, total_results } = await searchAPIData();
+		console.log(results);
 
 		global.search.page = page;
 		global.search.totalPages = total_pages;
