@@ -363,3 +363,7 @@ section h2 {
 	max-height: 70px;
 	border-radius: 20px; /*make it cricle*/
 }
+
+.explore-rating {
+	background-color: #bd55e0;
+}
